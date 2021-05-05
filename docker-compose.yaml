@@ -1,0 +1,12 @@
+version: "3.5"
+
+services:
+  test-hero:
+    container_name: test-hero
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - 9090:80
+    volumes:
+      - ".:/var/www"
