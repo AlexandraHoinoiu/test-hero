@@ -57,28 +57,26 @@ class GameApplication
         $this->player2 = $player2;
     }
 
-    private function setPlayers(Character $playerA, Character $playerB): void
+    protected function setPlayers(Character $playerA, Character $playerB): void
     {
         if ($playerA->getSpeed() == $playerB->getSpeed()) {
-            if ($playerA->getLuck() > $playerB->getLuck()) {
-                $this->setPlayer1($playerA);
-                $this->setPlayer2($playerB);
-            } else {
+            $this->setPlayer1($playerA);
+            $this->setPlayer2($playerB);
+            if ($playerA->getLuck() < $playerB->getLuck()) {
                 $this->setPlayer1($playerB);
                 $this->setPlayer2($playerA);
             }
         } else {
-            if ($playerA->getSpeed() > $playerB->getSpeed()) {
-                $this->setPlayer1($playerA);
-                $this->setPlayer2($playerB);
-            } else {
+            $this->setPlayer1($playerA);
+            $this->setPlayer2($playerB);
+            if ($playerA->getSpeed() < $playerB->getSpeed()) {
                 $this->setPlayer1($playerB);
                 $this->setPlayer2($playerA);
             }
         }
     }
 
-    private function playersLive(): bool
+    protected function playersLive(): bool
     {
         if ($this->player1->getHealth() <= 0 || $this->player2->getHealth() <= 0) {
             return false;
