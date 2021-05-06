@@ -8,7 +8,7 @@ require dirname(__FILE__) . "/../autoload.php";
 header('Content-Type: text/plain');
 
 try {
-    $config = require_once dirname(__FILE__) . "/../config/properties.php";
+    $config = require_once CONFIG_DIR . "properties.php";
 
     $charactersFactory = new CharactersFactory();
     $Orderus = $charactersFactory->getCharacter('hero', $config, 'Orderus');

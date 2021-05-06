@@ -10,6 +10,7 @@ class GameApplication
 {
     private Character $player1;
     private Character $player2;
+    const MAX_ROUNDS = 20;
 
     public function __construct(Character $playerA, Character $playerB)
     {
@@ -22,7 +23,7 @@ class GameApplication
         $turn = 1;
         echo 'First attack is done by player ' . $this->player1->getName() . "\n";
         ob_flush();
-        while ($turn <= 20 && $this->playersLive()) {
+        while ($turn <= self::MAX_ROUNDS && $this->playersLive()) {
             echo 'Round ' . $turn;
             echo "\n";
             if ($turn % 2 == 1) {
@@ -55,6 +56,16 @@ class GameApplication
     public function setPlayer2(Character $player2): void
     {
         $this->player2 = $player2;
+    }
+
+    public function getPlayer1(): Character
+    {
+        return $this->player1;
+    }
+
+    public function getPlayer2(): Character
+    {
+        return $this->player2;
     }
 
     protected function setPlayers(Character $playerA, Character $playerB): void

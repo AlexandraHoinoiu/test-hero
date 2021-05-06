@@ -8,7 +8,7 @@ class Beast extends Character
 {
     function attack(Character $character): void
     {
-        if (rand(0, 100) >= $character->getLuck()) {
+        if (rand(0, 100) > $character->getLuck()) {
             echo $this->name . " attacks \n";
             $damage = $this->strength - $character->getDefence();
             $character->getDamage($damage);

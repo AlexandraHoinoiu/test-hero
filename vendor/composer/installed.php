@@ -1,24 +1,38 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '428dd008315b5f6ffe370d31e1799f4626658067',
     'name' => 'alexandra/test-hero',
   ),
   'versions' => 
   array (
     'alexandra/test-hero' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '428dd008315b5f6ffe370d31e1799f4626658067',
+    ),
+    'cordoval/hamcrest-php' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
+    ),
+    'davedevelopment/hamcrest-php' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
     ),
     'doctrine/instantiator' => 
     array (
@@ -28,6 +42,31 @@
       array (
       ),
       'reference' => 'd56bf6102915de5702778fe20f2de3b2fe570b5b',
+    ),
+    'hamcrest/hamcrest-php' => 
+    array (
+      'pretty_version' => 'v2.0.1',
+      'version' => '2.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8c3d0a3f6af734494ad8f6fbbee0ba92422859f3',
+    ),
+    'kodova/hamcrest-php' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
+    ),
+    'mockery/mockery' => 
+    array (
+      'pretty_version' => '1.4.3',
+      'version' => '1.4.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd1339f64479af1bee0e82a0413813fe5345a54ea',
     ),
     'myclabs/deep-copy' => 
     array (
